@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {Button, Container} from '@material-ui/core';
+import {Container, Fab} from '@material-ui/core';
 
 const unsplashimg = {
   src: 'https://source.unsplash.com/1600x900/?Christmas',
@@ -12,8 +12,8 @@ class App extends Component {
 
       <Container maxWidth="xl" className="App">
         
-        <header className="App-header">
-          <h1 className="App-title">Get Some Christmas Cheer!</h1>
+        <header className="app-header">
+          <h1 className="app-title">Create Christmas!</h1>
         </header>
 
         <img id="christmas-image"
@@ -21,9 +21,11 @@ class App extends Component {
           alt = {unsplashimg.alt} 
         />
 
-        <Button variant="contained" color="primary">
-          Sprinkle Christmas Magic!
-        </Button>
+        <Fab id="making-christmas" variant="extended" aria-label="Generate random Christmas image">
+          <span className="iconify" data-icon="mdi-snowflake" data-inline="false"></span>
+            Sprinkle Christmas Cheer!
+          <span className="iconify" data-icon="mdi-snowflake" data-inline="false"></span>
+        </Fab>
       
       </Container>
     );
