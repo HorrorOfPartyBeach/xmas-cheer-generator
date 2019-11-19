@@ -1,9 +1,11 @@
 import React, { Component } from 'react';
-import {Container, Fab} from '@material-ui/core';
+import {Container} from '@material-ui/core';
+import GenerateButton from './components/GenerateButton';
+import * as config from './config';
 
 const unsplashimg = {
   src: 'https://source.unsplash.com/1600x900/?Christmas',
-  alt: 'random unsplash image'
+  alt: 'Random Christmas image'
 };
 
 class App extends Component {
@@ -17,19 +19,21 @@ class App extends Component {
         </header>
 
         <img id="christmas-image"
-          src = {unsplashimg.src}
-          alt = {unsplashimg.alt} 
-        />
+              src = {unsplashimg.src}
+              alt = {unsplashimg.alt} 
+            />
 
-        <Fab id="making-christmas" variant="extended" aria-label="Generate random Christmas image">
-          <span className="iconify" data-icon="mdi-snowflake" data-inline="false"></span>
-            Sprinkle Christmas Cheer!
-          <span className="iconify" data-icon="mdi-snowflake" data-inline="false"></span>
-        </Fab>
+        <GenerateButton/>
       
       </Container>
     );
   }
+
+  componentDidMount() {
+    const ACCESS_KEY = config.ACCESS_KEY;
+    console.log(ACCESS_KEY, 'Component mounted...')
+  }
+
 }
 
 export default App;

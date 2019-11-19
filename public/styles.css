@@ -13,22 +13,25 @@
   }
 
   #christmas-image {
-    max-width: 100%;
+    max-width: 70%;
     max-height: 100vh;
     text-align: center;
     border-radius: 7px;
     border: double red 5px;
-    margin: 0px 0px 30px 0px;
+    margin: 0 auto;
+    display: block;
   }
 
   #making-christmas {
     background-color: darkgreen;
     color: white;
-    margin: 0px 0px 40px 0px;
+    margin: 0 auto;
+    display: block;
+    top: 30px;
   }
 
   .iconify {
-    margin-bottom: 2px;
+    margin-bottom: -2px;
     padding: 0px 7px 0px 7px;
     color: white;
   }
