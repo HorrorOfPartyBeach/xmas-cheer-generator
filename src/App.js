@@ -1,15 +1,28 @@
 import React, { Component } from 'react';
 import {Container} from '@material-ui/core';
 import GenerateButton from './components/GenerateButton';
-import * as config from './config';
+//import * as config from './config';
+import * as api from './Api';
 
-const unsplashimg = {
-  src: 'https://source.unsplash.com/1600x900/?Christmas',
-  alt: 'Random Christmas image'
-};
+// const unsplashimg = {
+//   src: 'https://source.unsplash.com/1600x900/?Christmas',
+//   alt: 'Random Christmas image'
+// };
 
 class App extends Component {
+  state = {
+    christmasImage: {
+      alt: '',
+      url: '',
+      description: '',
+      credit: ''
+    }
+  };
+
   render() {
+
+    const images = this.state;
+    console.log(images, 'state');
     return (
 
       <Container maxWidth="xl" className="App">
@@ -18,21 +31,36 @@ class App extends Component {
           <h1 className="app-title">Create Christmas!</h1>
         </header>
 
-        <img id="christmas-image"
-              src = {unsplashimg.src}
-              alt = {unsplashimg.alt} 
-            />
+          <img id="christmas-image"
+            src={images.url}
+            alt={images.alt}
+          />
+          <blockquote>
+          <cite>Credit: {images.credit}</cite>
+          <p>{images.description}</p>
+          </blockquote>
 
-        <GenerateButton/>
+        <GenerateButton type="button" onClick={this.fetchChristmas}/>
       
       </Container>
     );
   }
 
   componentDidMount() {
-    const ACCESS_KEY = config.ACCESS_KEY;
-    console.log(ACCESS_KEY, 'Component mounted...')
+    //const ACCESS_KEY = config.ACCESS_KEY;
+    console.log('Component mounted...')
+    this.fetchChristmas();
   }
+  fetchChristmas = async () => {
+    const christmas = await api.getChristmas();
+    console.log(christmas, 'Christmas');
+    this.setState({
+      url: christmas.urls.regular,
+      alt: christmas.alt_description,
+      description: christmas.description,
+      credit: christmas.user.name
+    });
+  };
 
 }
 

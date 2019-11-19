@@ -22,6 +22,10 @@
     display: block;
   }
 
+  blockquote {
+    color: white;
+  }
+
   #making-christmas {
     background-color: darkgreen;
     color: white;
