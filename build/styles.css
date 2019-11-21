@@ -1,0 +1,63 @@
+  body {
+    background-color: rgb(24, 22, 22);
+  }
+
+  .App {
+    text-align: center;
+    min-height: 1000px;
+  }
+
+  #no-snow-btn {
+    margin-top: 10px;
+    background: darkgreen;
+    color: white;
+    padding:5px 10px 35px 5px;
+    align-items: flex-end;
+    border: 3px groove red;
+    display: flex;
+  }
+
+  #no-snow-icon {
+    font-size: 30px;
+  }
+
+  a {
+    color: red;
+  }
+
+  h1 {
+    color: white;
+    font-family: 'Oleo Script', cursive;
+    letter-spacing: 0.1em;
+    font-size: 3em;
+  }
+
+  #christmas-image {
+    max-width: 70%;
+    max-height: 100vh;
+    text-align: center;
+    border-radius: 7px;
+    border: double red 5px;
+    margin: 0 auto;
+    display: block;
+  }
+
+  blockquote {
+    color: white;
+  }
+
+  #making-christmas {
+    background-color: darkgreen;
+    color: white;
+    margin: 0 auto;
+    display: block;
+    top: 30px;
+    font-family: 'Courgette', cursive;
+    border: 3px groove red;
+  }
+
+  .iconify {
+    margin-bottom: -2px;
+    padding: 0px 7px 0px 7px;
+    color: white;
+  }
