@@ -1,13 +1,8 @@
 import React, { Component } from 'react';
-import {Container} from '@material-ui/core';
+import { Container } from '@material-ui/core';
 import GenerateButton from './components/GenerateButton';
-//import * as config from './config';
+import {Fab} from '@material-ui/core';
 import * as api from './Api';
-
-// const unsplashimg = {
-//   src: 'https://source.unsplash.com/1600x900/?Christmas',
-//   alt: 'Random Christmas image'
-// };
 
 class App extends Component {
   state = {
@@ -22,10 +17,14 @@ class App extends Component {
   render() {
 
     const images = this.state;
-    console.log(images, 'state');
     return (
 
       <Container maxWidth="xl" className="App">
+        
+        <Fab id="no-snow-btn" onClick={this.stopSnow} size="small" variant="extended" aria-label="Stop snow animation">
+          <span id="no-snow-icon" className="iconify" data-icon="emojione-monotone:snowman-without-snow" data-inline="false"></span>
+            Snow
+        </Fab>
         
         <header className="app-header">
           <h1 className="app-title">Create Christmas!</h1>
@@ -36,7 +35,7 @@ class App extends Component {
             alt={images.alt}
           />
           <blockquote>
-          <cite>Credit: {images.credit}</cite>
+            <cite>Photo by {images.credit} on <a href="https://unsplash.com/?utm_source=christmas_joy_generator&utm_medium=referral">Unsplash</a></cite>
           <p>{images.description}</p>
           </blockquote>
 
@@ -47,10 +46,10 @@ class App extends Component {
   }
 
   componentDidMount() {
-    //const ACCESS_KEY = config.ACCESS_KEY;
     console.log('Component mounted...')
     this.fetchChristmas();
-  }
+  };
+
   fetchChristmas = async () => {
     const christmas = await api.getChristmas();
     console.log(christmas, 'Christmas');
@@ -60,6 +59,15 @@ class App extends Component {
       description: christmas.description,
       credit: christmas.user.name
     });
+  };
+
+  stopSnow = () => {
+    const snow = document.getElementById('snow');
+      if (snow.style.display === "none") {
+        snow.style.display = "block";
+      } else {
+        snow.style.display = "none";
+      }
   };
 
 }

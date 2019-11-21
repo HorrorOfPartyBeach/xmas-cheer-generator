@@ -4,11 +4,31 @@
 
   .App {
     text-align: center;
+    min-height: 1000px;
+  }
+
+  #no-snow-btn {
+    margin-top: 10px;
+    background: darkgreen;
+    color: white;
+    padding:5px 10px 35px 5px;
+    align-items: flex-end;
+    border: 3px groove red;
+    display: flex;
+  }
+
+  #no-snow-icon {
+    font-size: 30px;
+  }
+
+  a {
+    color: red;
   }
 
   h1 {
     color: white;
-    font-family: 'Mountains of Christmas', cursive;
+    font-family: 'Oleo Script', cursive;
+    letter-spacing: 0.1em;
     font-size: 3em;
   }
 
@@ -32,6 +52,8 @@
     margin: 0 auto;
     display: block;
     top: 30px;
+    font-family: 'Courgette', cursive;
+    border: 3px groove red;
   }
 
   .iconify {

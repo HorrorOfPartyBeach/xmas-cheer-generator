@@ -1,5 +1,5 @@
 node_modules
-src/config.js
+.env
 react-scripts
 react-scripts.cmd
 react-scripts.ps1

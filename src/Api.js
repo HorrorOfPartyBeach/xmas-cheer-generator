@@ -1,7 +1,6 @@
 import axios from 'axios';
-import * as config from './config';
 
-const ACCESS_KEY = config.ACCESS_KEY;
+const ACCESS_KEY =`${process.env.REACT_APP_API_KEY_CHRISTMAS}`
 const API_URL = 'https://api.unsplash.com/';
 
 // Get a random Christmas image
