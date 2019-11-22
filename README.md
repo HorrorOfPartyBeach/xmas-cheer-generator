@@ -16,3 +16,15 @@ A deployed version of the app can be found at https://createchristmas.netlify.co
 [Material UI](https://material-ui.com/) - A popular React UI framework<br>
 [Axios](https://www.npmjs.com/package/axios) - Promise based HTTP client for the browser and node.js<br>
 [Netlify](https://www.netlify.com/) - For deployment<br>
+[Snow made by Pajasevi](https://pajasevi.github.io/CSSnowflakes/) - CSS animation<br>
+
+---
+## Accessibility
+
+A few months ago, I had the opportunity to take the lead on accessibility compliance in a Vue.js app. I had some knowledge of accessibility/a11y but didn't realise how extensive the requirements were. I did a lot of research and learning and found it's an area I'm really passionate about.
+
+Unfortunately, I also discovered that the state of accessibility is at a critical stage and we may be moving backwards due to the nature of SPAs. React is endeavouring to incorporate a11y and so I wanted to use it in this app.
+
+The picture generator is still in its early stages but I've tried to use semantic HTML where I can, good colour contrast and alt tags. Additionally, the snow animation can be turned off by the first button on the page.
+
+I'm looking forward to adding further a11y features to the app as I expand it.
