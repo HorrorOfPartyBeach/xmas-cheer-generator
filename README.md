@@ -12,7 +12,7 @@ A deployed version of the app can be found at https://createchristmas.netlify.co
 ---
 ## Tech
 
-[React](https://reactjs.org/) - A JavaScript library for building user interfaces
-[Material UI](https://material-ui.com/) - A popular React UI framework
-[Axios](https://www.npmjs.com/package/axios) - Promise based HTTP client for the browser and node.js
-[Netlify](https://www.netlify.com/) - For deployment
+[React](https://reactjs.org/) - A JavaScript library for building user interfaces<br>
+[Material UI](https://material-ui.com/) - A popular React UI framework<br>
+[Axios](https://www.npmjs.com/package/axios) - Promise based HTTP client for the browser and node.js<br>
+[Netlify](https://www.netlify.com/) - For deployment<br>
