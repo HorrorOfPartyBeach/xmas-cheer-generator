@@ -28,3 +28,14 @@ Unfortunately, I also discovered that the state of accessibility is at a critica
 The picture generator is still in its early stages but I've tried to use semantic HTML where I can, good colour contrast and alt tags. Additionally, the snow animation can be turned off by the first button on the page.
 
 I'm looking forward to adding further a11y features to the app as I expand it.
+
+---
+## Future Plans
+
+As I mentioned above, I will be adding more features and refactoring the app over time. 
+
+One of the things I want to do is create a separate server to hit various endpoints. I feel this is more secure for using with an API key, even though it is currently hidden.
+
+I would also like to add a search element so users could try different festive searches such as "Hot Cocoa" or "Christmas Lights", but I need to think about how to limit this search to just a Christmas or seasonal theme. 
+
+Testing, possibly using Jest or Cyprus, is also in my future plans and an accessibility audit using automated and manual testing.
