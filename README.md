@@ -39,3 +39,5 @@ One of the things I want to do is create a separate server to hit various endpoi
 I would also like to add a search element so users could try different festive searches such as "Hot Cocoa" or "Christmas Lights", but I need to think about how to limit this search to just a Christmas or seasonal theme. 
 
 Testing, possibly using Jest or Cyprus, is also in my future plans and an accessibility audit using automated and manual testing.
+
+I am also considering adding Sass or Less to the project. 
